@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Bitango_.Styles.SmallDevicesStyle"
+            xmlns:custom="clr-namespace:Bitango_.Customs">
+
+    <!--<OnPlatform  x:TypeArguments="x:Double" iOS="10" Android="10" x:Key="PageSpacing" />
+    <OnPlatform  x:TypeArguments="Thickness" iOS="10" Android="228" x:Key="PagePadding" />-->
+
+    <OnIdiom  x:TypeArguments="x:Double" Tablet="21" Phone="21" x:Key="TitleFontSize"/>
+    <OnIdiom  x:TypeArguments="x:Double" Tablet="16" Phone="16" x:Key="FontSizeLarge"/>
+    <OnIdiom  x:TypeArguments="x:Double" Tablet="14" Phone="14" x:Key="FontSizeRegular"/>
+    <OnIdiom  x:TypeArguments="x:Double" Tablet="13" Phone="13" x:Key="FontSizeMedium" />
+    <OnIdiom  x:TypeArguments="x:Double" Tablet="10" Phone="10" x:Key="FontSizeSmall"/>
+
+    <OnIdiom  x:TypeArguments="x:Int16" Tablet="35" Phone="35" x:Key="FixedButtonStackHeight"/>
+
+    <Style TargetType="Frame" x:Key="MainEntryFrame">
+        <Setter Property="Padding" Value="10,1,10,1" />
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="36" Tablet="36"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="CornerRadius" Value="18" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="HasShadow" Value="False" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="MainEntryImage">
+        <Setter Property="FontFamily" Value="Fontello" />
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="20" Tablet="20"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style TargetType="custom:CustomEntry" x:Key="MainEntry">
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="14" Tablet="14"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+    </Style>
+
+    <Style TargetType="Frame" x:Key="MainEditorFrame">
+        <Setter Property="Padding" Value="10,1,10,1" />
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="140" Tablet="140"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="CornerRadius" Value="18" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="HasShadow" Value="False" />
+    </Style>
+
+    <Style TargetType="custom:CustomEntry" x:Key="MainEditor">
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="120" Tablet="120"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="14" Tablet="14"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="MainButton">
+        <Setter Property="Padding" Value="10,1,10,1" />
+        <Setter Property="CornerRadius" Value="18" />
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="36" Tablet="36"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="13"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BackgroundColor" Value="{StaticResource Pink}" />
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="AltTextButton">
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="20" Tablet="20"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BackgroundColor" Value="{StaticResource AltBackground}" />
+        <Setter Property="TextColor" Value="{StaticResource GreyText}" />
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="13"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button" x:Key="BackArrowButton">
+        <Setter Property="Text" Value="" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="30" Tablet="30"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="WidthRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="30" Tablet="30"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="13,18,0,0" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="FontFamily" Value="Fontello" />
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="18" Tablet="18"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="Image" x:Key="ImageRoundBitanga">
+        <Setter Property="Source" Value="LoginPage_bitanga.png" />
+        <Setter Property="WidthRequest" Value="120" />
+        <Setter Property="HeightRequest" Value="120" />
+        <Setter Property="Margin" Value="0,0,0,10" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="MainShellSquareButton">
+        <Setter Property="WidthRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="65" Tablet="60"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="65" Tablet="60"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="27" Tablet="27"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FontFamily" Value="Fontello" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="TextColor" Value="{StaticResource Pink}" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="CornerRadius" Value="10" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="MainShellSquareButtonLabel">
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="13"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FontFamily" Value="Poppins-Medium" />
+        <Setter Property="TextColor" Value="{StaticResource GreyText}" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="SocialButton">
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="20" Tablet="20"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FontFamily" Value="Fontello" />
+        <Setter Property="Padding" Value="30,15,30,15" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="CornerRadius" Value="10" />
+    </Style>
+
+    <Style TargetType="Frame" x:Key="SupportCardFrame">
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="15"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="HasShadow" Value="False" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="InfoPageRoundButton">
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="23" Tablet="22"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="WidthRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="70" Tablet="70"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="70" Tablet="60"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderRadius" Value="35" />
+        <Setter Property="FontFamily" Value="Fontello" />
+        <Setter Property="BackgroundColor" Value="{StaticResource PinkBackground}" />
+        <Setter Property="TextColor" Value="{StaticResource Pink}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="MediumTopMarginLabel">
+        <Setter Property="Margin" Value="0,20,0,0" />
+    </Style>
+
+    <Style TargetType="Frame" x:Key="MyAccountPageFrame">
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnIdiom x:TypeArguments="x:Double" Phone="30" Tablet="30"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HasShadow" Value="False" />
+        <Setter Property="BackgroundColor" Value="{StaticResource MainBackground}" />
+    </Style>
+
+</ResourceDictionary>

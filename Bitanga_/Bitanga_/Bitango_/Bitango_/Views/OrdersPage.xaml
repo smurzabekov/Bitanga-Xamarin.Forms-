@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:vm="clr-namespace:Bitango_.ViewModel"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.OrdersPage"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             BackgroundColor="#f9f5f2"
+             NavigationPage.HasNavigationBar="False">
+    <custom:CustomShell.TitleView>
+        <Grid>
+            <Label Text="Мои заказы" Margin="4,10,0,0" FontSize="24" TextColor="#000000"></Label>
+        </Grid>
+    </custom:CustomShell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:OrderViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="15,10,15,0">
+            <CollectionView x:Name="orderList" Margin="0,0,0,0" Grid.Row="1" ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder}"  SelectionMode="Single" 
+                        SelectionChangedCommand="{Binding SelectionCommand}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="15" HorizontalItemSpacing="15" Span="1"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="15" CornerRadius="10" HeightRequest="105" Margin="0,0,0,15" HasShadow="false">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="160"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0" >
+                                    <Label Text="{Binding ID, StringFormat='Заказ №{0}'}" FontSize="16" TextColor="#222222" FontAttributes="Bold"></Label>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100" />
+                                            <ColumnDefinition Width="60"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="Общая сумма:" FontFamily="Poppins-Medium" VerticalOptions="Center" FontSize="14" TextColor="#9B9B9B" Grid.Column="0"></Label>
+                                        <Label Text="{Binding TotalAmount, StringFormat='{0}₸'}" FontFamily="Poppins-Regular" VerticalOptions="Center" FontSize="16" TextColor="#222222"  Grid.Column="1"></Label>
+                                    </Grid>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="85" />
+                                            <ColumnDefinition Width="60"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="Количество:" FontFamily="Poppins-Medium" VerticalOptions="Center" FontSize="14" TextColor="#9B9B9B" Grid.Column="0"></Label>
+                                        <Label Text="{Binding Quantity}" FontFamily="Poppins-Regular" VerticalOptions="Center" FontSize="16" TextColor="#222222"  Grid.Column="1"></Label>
+                                    </Grid>
+                                    <Button Text="Подробности" FontFamily="Poppins-Medium" FontSize="14" TextColor="#222222" BorderColor="#222222" BorderWidth="1" 
+                                            BackgroundColor="White" CornerRadius="15" Padding="0,1,0,1" WidthRequest="110" HeightRequest="36" HorizontalOptions="Start"/>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1">
+                                    <Label Text="{Binding DateOfIssue}" HorizontalOptions="End" FontFamily="Poppins-Regular" FontSize="14" TextColor="#9B9B9B"></Label>
+                                    <Grid HorizontalOptions="End" Margin="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="55" />
+                                            <ColumnDefinition Width="60"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="Бонусы:" FontFamily="Poppins-Medium" VerticalOptions="Center" FontSize="14" TextColor="#9B9B9B" Grid.Column="0"></Label>
+                                        <Label Text="{Binding Bonuses, StringFormat='{0} @ '}" FontFamily="Bitanga_Roboto_Regular" VerticalOptions="Center" FontSize="16" TextColor="#222222"  Grid.Column="1"></Label>
+                                    </Grid>
+                                    <Label Margin="0,35,0,0" HorizontalOptions="End" Text="Бонусы начислены" TextColor="#2AA952"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

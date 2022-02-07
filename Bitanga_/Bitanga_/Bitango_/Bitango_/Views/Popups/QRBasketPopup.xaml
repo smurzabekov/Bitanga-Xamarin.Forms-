@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rg:PopupPage
+    xmlns:rg="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:qr="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.QRBasketPopup">
+    <StackLayout x:Name="stackPrinc" HeightRequest="368" VerticalOptions="End" HorizontalOptions="FillAndExpand" BackgroundColor="#e5d9d9">
+        <qr:ZXingBarcodeImageView x:Name="qrcode" WidthRequest="250" HeightRequest="250" HorizontalOptions="Center" Margin="0,35,0,20"/>
+        <Grid>
+            <Label TextColor="#000000" Text="{x:Static resource:AppResources.ShowYourPhoneScreen}" HorizontalTextAlignment="Center" FontFamily="Poppins-Regular" FontSize="{StaticResource FontSizeLarge}" Margin="0" Padding="0"/>
+            <Label TextColor="#000000" Text="{x:Static resource:AppResources.ToOurEmployee}" HorizontalTextAlignment="Center" FontFamily="Poppins-Regular" FontSize="{StaticResource FontSizeLarge}" Margin="0,20,0,0" Padding="0"/>
+        </Grid>
+    </StackLayout>
+</rg:PopupPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.MapPage"
+             xmlns:custom="clr-namespace:Bitango_.Customs">
+    <custom:CustomShell.TitleView>
+        <Grid>
+            <Label Text="{x:Static resource:AppResources.Location}" Margin="4,10,0,0" FontSize="{StaticResource TitleFontSize}" TextColor="#000000"></Label>
+        </Grid>
+    </custom:CustomShell.TitleView>
+    <ContentPage.Content>
+        <Grid>
+            <map:Map x:Name="MyMap" MapType="Street" HasZoomEnabled="True">
+                <map:Map.ItemTemplate>
+                    <DataTemplate>
+                        <map:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="{Binding PlaceName}" />
+                    </DataTemplate>
+                </map:Map.ItemTemplate>
+            </map:Map>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

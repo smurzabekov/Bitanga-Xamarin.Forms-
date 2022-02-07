@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.AdminPanel"
+             BackgroundColor="#f9f5f2">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="10" VerticalOptions="Center">
+                <Grid>
+                    <Image Grid.Row="0" Source="LoginPage_bitanga.png" WidthRequest="150" HeightRequest="150" Margin="0,0,0,10" VerticalOptions="Center"></Image>
+                </Grid>
+                <Label TextColor="#222222" Margin="6,0,6,15" Text="Пожалуйста, введите Ваш адрес электронной почты сотрудника. Указанный аккаунт получит возможности для полноценной работы в качестве сотрудника." FontSize="{StaticResource FontSizeMedium}"></Label>
+                <Frame Margin="0,0,0,30" Style="{StaticResource MainEntryFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="23"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="" Style="{StaticResource MainEntryImage}"/>
+                        <custom:CustomEntry x:Name="EntryEmail" Grid.Column="1" Placeholder="Электронная почта" Style="{StaticResource MainEntry}"/>
+                    </Grid>
+                </Frame>
+                <Label x:Name="ErrorLabel" IsVisible="False" Margin="0,50,0,0" TextColor="#F01F0E" HorizontalOptions="Center" Text="Not a valid email address. Should be your@email.com" FontSize="{StaticResource FontSizeSmall}"></Label>
+                <Button x:Name="AddEmploy" Text="Назначить сотрудника" Clicked="AddEmploy_Clicked" Style="{StaticResource MainButton}"></Button>
+                <Button x:Name="AddAdmin" Text="Назначить администратора" Clicked="AddAdmin_Clicked" Style="{StaticResource MainButton}"></Button>
+                <Button x:Name="DeleteEmploy" Text="Удалить сотрудника" Clicked="DeleteEmploy_Clicked" Style="{StaticResource MainButton}"></Button>
+                <Button x:Name="DeleteAdmin" Text="Снять админа" Clicked="DeleteAdmin_Clicked" Style="{StaticResource MainButton}"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

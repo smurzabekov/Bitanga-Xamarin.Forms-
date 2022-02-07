@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.SupportEmailPage"
+             BackgroundColor="#f9f5f2">
+    <custom:CustomShell.TitleView>
+        <Grid>
+            <Label Text="{x:Static resource:AppResources.TechnicalSupport}" Margin="4,10,0,0" FontSize="{StaticResource TitleFontSize}" TextColor="#000000"></Label>
+        </Grid>
+    </custom:CustomShell.TitleView>
+    <ContentPage.Content>
+        <Grid Margin="15,10,15,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="45"/>
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <ScrollView>
+                    <StackLayout>
+                        <Label Text="{x:Static resource:AppResources.EnterYourEmail}" FontSize="{StaticResource FontSizeRegular}" Margin="7,0,0,7" TextColor="#828282"></Label>
+                        <Frame Margin="0,0,0,10" Style="{StaticResource MainEntryFrame}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="23"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="" Style="{StaticResource MainEntryImage}"/>
+                                <custom:CustomEntry x:Name="EntryUserEmail" Grid.Column="1" Placeholder="{x:Static resource:AppResources.Email}" Keyboard="Email" Style="{StaticResource MainEntry}"/>
+                            </Grid>
+                        </Frame>
+                        <!--<Label Text="Опишите неполадку" FontSize="16" Margin="7,0,0,7" TextColor="#828282"></Label>-->
+                        <Frame Margin="0,0,0,10" Style="{StaticResource MainEditorFrame}">
+                            <Editor x:Name="editor_problem" Placeholder="{x:Static resource:AppResources.DescribeTheProblem}" Style="{StaticResource MainEditor}"/>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Margin="0">
+                <Button Text="{x:Static resource:AppResources.Send}" Clicked="Send_Clicked" Style="{StaticResource MainButton}"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+    

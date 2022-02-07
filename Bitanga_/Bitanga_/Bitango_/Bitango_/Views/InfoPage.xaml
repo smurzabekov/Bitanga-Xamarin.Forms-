@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.InfoPage"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             Title="О нас" 
+             BackgroundColor="#f9f5f2">
+    <custom:CustomShell.TitleView>
+        <Grid>
+            <Label Text="{x:Static resource:AppResources.AboutUs}" Margin="4,10,0,0" FontSize="{StaticResource TitleFontSize}" TextColor="#000000"></Label>
+        </Grid>
+    </custom:CustomShell.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="15,10,15,0">
+                <Grid BackgroundColor="#f9f5f2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <Frame HorizontalOptions="Center" Margin="0" Padding="0" IsClippedToBounds="True" CornerRadius="15" BackgroundColor="#f9f5f2" HasShadow="False">
+                        <Image x:Name="aboutImage" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
+                    </Frame>
+                    <Grid Grid.Row="1" Margin="0,-35,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="" Clicked="Globe_Clicked" Margin="20,0,20,0" HorizontalOptions="Start" Style="{StaticResource InfoPageRoundButton}"></Button>
+                        <Button Grid.Column="1" Text="" Clicked="Map_Clicked" Margin="20,0,20,0" HorizontalOptions="End" Style="{StaticResource InfoPageRoundButton}"></Button>
+                    </Grid>
+                </Grid>
+                <Label Text="{x:Static resource:AppResources.RestaurantBitanga}" FontFamily="Poppins-Regular" FontSize="{StaticResource FontSizeLarge}" TextColor="#3E4462" Margin="0,10,0,5"/>
+                <Label x:Name="Description" FontFamily="Poppins-Regular" FontSize="{StaticResource FontSizeRegular}" TextColor="#7E7E7E"/>
+                <Grid HorizontalOptions="Center" WidthRequest="330" HeightRequest="64" Margin="0,10,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Clicked="Instagram_Clicked" Text="" TextColor="#fa7e1e" Style="{StaticResource SocialButton}"/>
+                    <Button Grid.Column="1" Clicked="Whatsapp_Clicked" Text="" TextColor="#43d854" Style="{StaticResource SocialButton}"/>
+                    <Button Grid.Column="2" Clicked="Phone_Clicked" Text="" TextColor="#f2acac" Style="{StaticResource SocialButton}"/>
+                </Grid>
+            </StackLayout>    
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

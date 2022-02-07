@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.LoginPage"
+             BackgroundColor="#e5d9d9"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid Margin="10,10,10,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" VerticalOptions="Center">
+                <Image Source="LoginPage_bitanga.png" WidthRequest="130" HeightRequest="130" Margin="0,0,0,10" VerticalOptions="Center"></Image>
+                <Frame Margin="0,0,0,2" Style="{StaticResource MainEntryFrame}"> 
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="" Style="{StaticResource MainEntryImage}" FontSize="20"/>
+                        <custom:CustomEntry x:Name="EntryUserEmail" Grid.Column="1" Keyboard="Email" Placeholder="{x:Static resource:AppResources.Email}" Style="{StaticResource MainEntry}"/>
+                    </Grid>
+                </Frame>
+                <Frame Style="{StaticResource MainEntryFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="" Style="{StaticResource MainEntryImage}"/>
+                        <custom:CustomEntry x:Name="EntryPassword" IsPassword="True" Grid.Column="1" Placeholder="{x:Static resource:AppResources.Password}" Style="{StaticResource MainEntry}"/>
+                    </Grid>
+                </Frame>
+                <Button Margin="0,8,0,0" Text="{x:Static resource:AppResources.ForgotPassword}" Clicked="Forgot_Clicked" BackgroundColor="{StaticResource AltBackground}" Style="{StaticResource AltTextButton}"></Button>
+                <Button Margin="0,8,0,2" Text="{x:Static resource:AppResources.SignIn}" Clicked="Login_Clicked" Style="{StaticResource MainButton}"></Button>
+                <Button Text="{x:Static resource:AppResources.SignUp}" Clicked="SignUp_Clicked" Style="{StaticResource MainButton}"></Button>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Margin="0">
+                <Label Margin="0" Padding="0" HeightRequest="18" Text="{x:Static resource:AppResources.LoginWith}" HorizontalOptions="Center" TextColor="#7E7E7E" FontSize="13"></Label>
+                <Grid HorizontalOptions="Center" WidthRequest="215" HeightRequest="64">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Clicked="OnGoogleLoginCommand" Text="" FontSize="25" FontFamily="Fontello" TextColor="#f2acac" VerticalOptions="Center" HorizontalOptions="Start" CornerRadius="10" BackgroundColor="White" Padding="35,20,35,20"/>
+                    <Button Grid.Column="1" Clicked="OnFacebookLoginCommand" Text="" FontSize="25" FontFamily="Fontello" TextColor="#f2acac" VerticalOptions="Center" HorizontalOptions="End" CornerRadius="10" BackgroundColor="White" Padding="35,20,35,20"/>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

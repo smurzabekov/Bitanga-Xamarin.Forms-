@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.QRResultBasketPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="ClientUsername_Label"/>
+            <Label x:Name="ClientID_Label"/>
+            <Label x:Name="ClientPhone_Label"/>
+            <Label x:Name="ClientWalletID_Label"/>
+            <Label x:Name="DishIDs_Label"/>
+            <Label x:Name="Format_Label"/>
+            <Button Clicked="Order_Clicked" Text="Отправить заказ"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>О нас</value>
+  </data>
+  <data name="ALinkToResetYourPassword" xml:space="preserve">
+    <value>Ссылка на сброс пароля была отправлена на указанную почту</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Количество:</value>
+  </data>
+  <data name="AnUnexpectedError" xml:space="preserve">
+    <value>Произошла непредвиденная ошибка</value>
+  </data>
+  <data name="AreYouSureYouWant" xml:space="preserve">
+    <value>Вы точно хотите выйти из аккаунта?</value>
+  </data>
+  <data name="AsSoonAsPossibleTheDevelopers" xml:space="preserve">
+    <value>В скорейшем времени разработчики отправят Вам ответное письмо на Ваш Email</value>
+  </data>
+  <data name="AuthorizationWasUnsuccessful" xml:space="preserve">
+    <value>Авторизация прошла неуспешно, попробуйте еще раз</value>
+  </data>
+  <data name="BonusPoints" xml:space="preserve">
+    <value>Бонусные баллы</value>
+  </data>
+  <data name="Book" xml:space="preserve">
+    <value>Бронировать</value>
+  </data>
+  <data name="Booking" xml:space="preserve">
+    <value>Бронь</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>Купить</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>Звонок</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>ОТМЕНА</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>Карта</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Смена пароля</value>
+  </data>
+  <data name="ChangePersonalData" xml:space="preserve">
+    <value>Измените личные данные</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Комментарии</value>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Поздравляем!</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Продолжить</value>
+  </data>
+  <data name="DataSavedSuccessfully" xml:space="preserve">
+    <value>Данные успешно сохранены</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Удалить аккаунт</value>
+  </data>
+  <data name="DescribeTheProblem" xml:space="preserve">
+    <value>Опишите неполадку</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Электронная почта</value>
+  </data>
+  <data name="EnterYourEmail" xml:space="preserve">
+    <value>Укажите электронную почту</value>
+  </data>
+  <data name="EnterYourPhoneNumber" xml:space="preserve">
+    <value>Введите номер телефона для изменения личных данных</value>
+  </data>
+  <data name="Error_" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>ЗАБЫЛИ ПАРОЛЬ?</value>
+  </data>
+  <data name="GiftProblems" xml:space="preserve">
+    <value>Проблемы с подарками</value>
+  </data>
+  <data name="GiftsForPoints" xml:space="preserve">
+    <value>Подарки за баллы</value>
+  </data>
+  <data name="HowCanWeHelpYou" xml:space="preserve">
+    <value>Чем мы можем вам помочь?</value>
+  </data>
+  <data name="IDidNotReceivePoints" xml:space="preserve">
+    <value>Мне не пришли баллы</value>
+  </data>
+  <data name="InvalidPhone" xml:space="preserve">
+    <value>Некорректный номер телефона</value>
+  </data>
+  <data name="IWantToEnterAPromoCode" xml:space="preserve">
+    <value>Я хочу ввести промо-код</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Местоположение</value>
+  </data>
+  <data name="LoginWith" xml:space="preserve">
+    <value>Авторизоваться через</value>
+  </data>
+  <data name="MyOrder" xml:space="preserve">
+    <value>Мой заказ</value>
+  </data>
+  <data name="MyOrders" xml:space="preserve">
+    <value>Мои заказы</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Мой профиль</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="NoInternetConnection" xml:space="preserve">
+    <value>Нет подключения к интернету!</value>
+  </data>
+  <data name="NotAValidEmail" xml:space="preserve">
+    <value>Недействительный адрес электронной почты. Должен быть your@email.com</value>
+  </data>
+  <data name="NumOfPersons" xml:space="preserve">
+    <value>Количество персон</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Заказать</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Другое</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="PasswordReset" xml:space="preserve">
+    <value>Сброс пароля</value>
+  </data>
+  <data name="PasswordsDoNotMatch" xml:space="preserve">
+    <value>Пароли не совпадают</value>
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>Личные данные</value>
+  </data>
+  <data name="PersonalDataPassword" xml:space="preserve">
+    <value>Личные данные, пароль</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="PleaseEnterEmail" xml:space="preserve">
+    <value>Пожалуйста, введите Ваш адрес электронной почты. Вы получите ссылку для создания нового пароля по электронной почте.</value>
+  </data>
+  <data name="PleaseFillInAllRequiredFields" xml:space="preserve">
+    <value>Заполните все необходимые поля для продолжения</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Подождите, пожалуйста...</value>
+  </data>
+  <data name="PromotionsAndNews" xml:space="preserve">
+    <value>Акции и новости</value>
+  </data>
+  <data name="RepeatPassword" xml:space="preserve">
+    <value>Повторите пароль</value>
+  </data>
+  <data name="RestaurantBitanga" xml:space="preserve">
+    <value>Ресторан Bitanga</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>СОХРАНИТЬ ИЗМЕНЕНИЯ</value>
+  </data>
+  <data name="Scanner" xml:space="preserve">
+    <value>Сканер</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>ОТПРАВИТЬ</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="ShowYourPhoneScreen" xml:space="preserve">
+    <value>Покажите экран телефона</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>ВОЙТИ</value>
+  </data>
+  <data name="SignOutOfAccount" xml:space="preserve">
+    <value>Выйти из аккаунта</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>ЗАРЕГИСТРИРОВАТЬСЯ</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Успех!</value>
+  </data>
+  <data name="SuccessfulBooking" xml:space="preserve">
+    <value>Бронирование прошло успешно!</value>
+  </data>
+  <data name="TechnicalSupport" xml:space="preserve">
+    <value>Техническая поддержка</value>
+  </data>
+  <data name="TheEmailWasSentSuccessfully" xml:space="preserve">
+    <value>Письмо отправлено успешно!</value>
+  </data>
+  <data name="TheManagerWillContact" xml:space="preserve">
+    <value>Менеджер свяжется с Вами в ближайшее время</value>
+  </data>
+  <data name="ThisEmailIsNotRegistered" xml:space="preserve">
+    <value>Данная электронная почта не зарегистрирована в приложении Bitanga</value>
+  </data>
+  <data name="ThisNumberBelongs" xml:space="preserve">
+    <value>Данный номер принадлежит другому пользователю</value>
+  </data>
+  <data name="ToOurEmployee" xml:space="preserve">
+    <value>нашему сотруднику</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>Общая сумма:</value>
+  </data>
+  <data name="Troubleshooting" xml:space="preserve">
+    <value>Устранение неполадок</value>
+  </data>
+  <data name="UnsuccessfulRegistration" xml:space="preserve">
+    <value>Неудачная регистрация</value>
+  </data>
+  <data name="UserRegistrationWasSuccessful" xml:space="preserve">
+    <value>Регистрация пользователя прошла успешно</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>ДA</value>
+  </data>
+</root>

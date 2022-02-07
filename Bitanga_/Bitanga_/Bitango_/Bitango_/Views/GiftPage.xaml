@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Bitango_.ViewModel"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.GiftPage"              
+             BackgroundColor="#f9f5f2">
+    <custom:CustomShell.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="label1" Text="{x:Static resource:AppResources.GiftsForPoints}" FontSize="{StaticResource TitleFontSize}" Margin="7,10,7,7" TextColor="Black" ></Label>
+            <Grid Grid.Column="1" Margin="0,10,0,0">
+                <Button BackgroundColor="Transparent" FontSize="28" Padding="0" TextColor="#000000" Text="" FontFamily="Fontello" Clicked="Basket_Clicked" HorizontalOptions="Center"></Button>
+                <Label Text="0" x:Name="Amount" Margin="5,0,0,8" FontSize="10" Padding="0" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"></Label>
+            </Grid>
+        </Grid>
+    </custom:CustomShell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:GiftViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout Margin="0,10,0,10">
+                    <CollectionView x:Name="menuList" Margin="10,0,10,0" SelectionMode="Single" ItemsSource="{Binding MenuItems}" 
+                        SelectedItem="{Binding SelectedMenuItem}"  
+                        SelectionChangedCommand="{Binding SelectionCommand}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="2" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="6">
+                                    <Frame Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="False" CornerRadius="10">
+                                        <StackLayout>
+                                            <Image Source="{Binding Image}" VerticalOptions="Start" WidthRequest="100" HeightRequest="100"></Image>
+                                            <Grid>
+                                                <Label Text="{Binding Name}" FontSize="18" TextColor="#2D0C57" Margin="15,3,0,0" FontAttributes="Bold"></Label>
+                                                <Label Text="{Binding HowManyDishes, StringFormat='({0})'}" FontSize="12" TextColor="#9586A8" Margin="15,28,0,8" ></Label>
+                                            </Grid>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.MyBasketPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             BackgroundColor="#f9f5f2">
+    <custom:CustomShell.TitleView>
+        <Grid>
+            <Label Text="{x:Static resource:AppResources.MyOrder}" Margin="4,10,0,0" FontSize="{StaticResource TitleFontSize}" TextColor="#000000"></Label>
+        </Grid>
+    </custom:CustomShell.TitleView>
+    <ContentPage.Content>
+        <StackLayout Margin="15,10,15,10">
+            <Grid Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="{x:Static resource:AppResources.TotalAmount}" FontFamily="Poppins-Medium" VerticalOptions="Center" FontSize="14" TextColor="#9B9B9B" Grid.Column="0"></Label>
+                <Label x:Name="AllCosts" FontFamily="Poppins-Regular" VerticalOptions="Center" HorizontalOptions="Start" FontSize="16" TextColor="#222222"  Grid.Column="1" ></Label>
+            </Grid>
+            <Grid Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="85" />
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="{x:Static resource:AppResources.Amount}" FontFamily="Poppins-Medium" VerticalOptions="Center" FontSize="14" TextColor="#9B9B9B" Grid.Column="0"></Label>
+                <Label x:Name="Amount" FontFamily="Bitanga_Roboto_Regular" VerticalOptions="Center" HorizontalTextAlignment="Start" FontSize="16" TextColor="#222222"  Grid.Column="1"></Label>
+            </Grid>
+            <ScrollView>
+                <StackLayout>
+                    <CollectionView x:Name="basket" Margin="0,7,0,0" >
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="12" HorizontalItemSpacing="20" Span="1"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Padding="0" CornerRadius="10" HeightRequest="104" Margin="0,0,0,5" HasShadow="False">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="104"/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image BackgroundColor="Black" Aspect="AspectFill" Source="{Binding Image}" WidthRequest="104" HeightRequest="104" />
+                                        <StackLayout Grid.Column="1" Padding="10,11,10,10">
+                                            <Grid>
+                                                <Label Text="{Binding Name}" FontFamily="Poppins-Medium" HorizontalOptions="Start" TextColor="#222222" FontSize="14"/>
+                                                <Label Text="{Binding Description}" TextColor="#9B9B9B" FontSize="12" FontFamily="Poppins-Regular" Margin="0,20,0,0"></Label>
+                                            </Grid>
+                                            <Grid Margin="0,10,0,0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="45"/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition Width="60"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Label Text="{Binding Price, StringFormat='{0} @'}" TextColor="Black"  FontFamily="Bitanga_Roboto_Regular" FontSize="14" VerticalOptions="End"/>
+                                                <StackLayout Grid.Column="1">
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition/>
+                                                            <ColumnDefinition Width="10"/>
+                                                            <ColumnDefinition/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Button BackgroundColor="White" Padding="0" Text="" FontFamily="Fontello" Clicked="Minus_Clicked"></Button>
+                                                        <Label x:Name="EachAmount" Text="{Binding AmountInBasket}" Padding="0" FontSize="20" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                                        <Button  BackgroundColor="White" Padding="0" Text="" FontFamily="Fontello" Grid.Column="2"  Clicked="Plus_Clicked"></Button>
+                                                    </Grid>
+                                                </StackLayout>
+                                                <Button Grid.Column="2" Clicked="Delete_Clicked" Text="Удалить" FontFamily="Poppins-Regular"  BackgroundColor="#f1abac" TextColor="White" HorizontalOptions="End" FontSize="12" Padding="4,4,4,4" VerticalOptions="Center" WidthRequest="90" HeightRequest="30" CornerRadius="2"></Button>
+                                            </Grid>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </ScrollView>
+            <Button Padding="15,1,15,1" CornerRadius="35" HeightRequest="45" Text="{x:Static resource:AppResources.Order}" BackgroundColor="#f2acac" Clicked="Order_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<custom:CustomShell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:Bitango_.Views"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             xmlns:vm="clr-namespace:Bitango_.ViewModel"
+             mc:Ignorable="d"
+             x:Class="Bitango_.MainPage"
+             BackgroundColor="#ffffff"
+             TabBarBackgroundColor="#ffffff">
+    <custom:CustomShell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#f2acac</Color>
+            <Style x:Key="BaseStyle" TargetType="Element" ApplyToDerivedTypes="True">
+                <Setter Property="Shell.BackgroundColor" Value="#f9f5f2" />
+                <Setter Property="Shell.ForegroundColor" Value="#000000" />
+                <Setter Property="Shell.TitleColor" Value="#000000" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="Green"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="Green"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" ApplyToDerivedTypes="True"/>
+        </ResourceDictionary>
+    </custom:CustomShell.Resources>
+
+    <TabBar>
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:MainShellPage}" />
+        </Tab>
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:GiftPage}" />
+        </Tab>
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:InfoPage}" />
+        </Tab>
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:AccountPage}" />
+        </Tab>
+    </TabBar>
+</custom:CustomShell>

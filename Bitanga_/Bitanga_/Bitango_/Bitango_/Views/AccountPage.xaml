@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.AccountPage"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             BackgroundColor="#f9f5f2">
+    <custom:CustomShell.TitleView>
+        <Grid>
+            <Label Text="{x:Static resource:AppResources.MyProfile}" Margin="4,10,0,0" FontSize="{StaticResource TitleFontSize}" TextColor="#000000"></Label>
+        </Grid>
+    </custom:CustomShell.TitleView>
+    <ContentPage.Content>
+        <Grid Margin="15,10,15,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition x:Name="Row" Height="45"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <ScrollView>
+                    <StackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="82"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Frame Grid.Column="0" CornerRadius="32"
+                           HasShadow="False"        
+                           HeightRequest="64"
+                           WidthRequest="64"
+                           Margin="0" HorizontalOptions="Start" VerticalOptions="Start"
+                           Padding="0"
+                           IsClippedToBounds="True"
+                           BackgroundColor="Black">
+                                <Image x:Name="Profile_Image"
+                               Aspect="AspectFill" 
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ProfileImage_Tapped"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Frame>
+                            <StackLayout Grid.Column="1">
+                                <Grid>
+                                    <Label x:Name="UserName" Text="Not found" FontSize="{StaticResource FontSizeLarge}" TextColor="#222222"></Label>
+                                    <Label x:Name="UserEmail" Padding="0" Text="unknown@mail.com" FontSize="{StaticResource FontSizeMedium}" TextColor="#9B9B9B" Style="{StaticResource MediumTopMarginLabel}"></Label>
+                                </Grid>
+                            </StackLayout>
+                        </Grid>
+                        <Frame Padding="15,1,15,1" Margin="0,10,0,6" BackgroundColor="#f7e8e5" HasShadow="False" CornerRadius="18" HeightRequest="36">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Margin="7" Text="{x:Static resource:AppResources.BonusPoints}" FontFamily="Poppins-Regular" FontSize="{StaticResource FontSizeRegular}" VerticalTextAlignment="Center" TextColor="{StaticResource GreyText}"></Label>
+                                <Label Margin="7" Grid.Column="1" x:Name="Balance" HorizontalOptions="End" FontFamily="Bitanga_Roboto_Regular" VerticalTextAlignment="Center" FontSize="16" TextColor="{StaticResource GreyText}"></Label>
+                            </Grid>
+                        </Frame>
+                        <!--<Frame Padding="15,1,15,1" Margin="0,0,0,5" BackgroundColor="#f7e8e5" HasShadow="False" CornerRadius="34" HeightRequest="36">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Margin="7" Text="Мой ID" FontFamily="Poppins-Regular" FontSize="16" VerticalTextAlignment="Center"></Label>
+                                <Label Margin="7" Grid.Column="1" Text="12121212" HorizontalOptions="End" FontFamily="Bitanga_Roboto_Regular" VerticalTextAlignment="Center" FontSize="16"></Label>
+                            </Grid>
+                        </Frame>-->
+                        <!--<Frame x:Name="Order_frame" HeightRequest="38" BackgroundColor="#f9f5f2" HasShadow="False">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Orders_Tapped"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Grid>
+                                        <Label Text="{x:Static resource:AppResources.MyOrders}" FontSize="16" TextColor="#222222" FontFamily="Poppins-Medium"></Label>
+                                        <Label Text="Уже 12 заказов" Margin="0,21,0,0" FontSize="11" FontFamily="Poppins-Regular"></Label>
+                                    </Grid>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1">
+                                    <Label Text="" FontSize="14" HorizontalOptions="End" VerticalOptions="Center" FontFamily="Fontello" TextColor="#9B9B9B" Margin="0,10,0,0"></Label>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>-->
+                        <Frame x:Name="Settings_frame" Style="{StaticResource MyAccountPageFrame}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Settings_Tapped"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Grid>
+                                        <Label Text="{x:Static resource:AppResources.Settings}" FontSize="{StaticResource FontSizeRegular}" TextColor="#222222" FontFamily="Poppins-Medium"></Label>
+                                        <Label Text="{x:Static resource:AppResources.PersonalDataPassword}" Margin="0,21,0,0" FontSize="{StaticResource FontSizeSmall}" TextColor="{StaticResource GreyText}" FontFamily="Poppins-Regular"></Label>
+                                    </Grid>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1">
+                                    <Label Text="" FontSize="14" HorizontalOptions="End" VerticalOptions="Center" FontFamily="Fontello" TextColor="#9B9B9B" Margin="0,10,0,0"></Label>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame x:Name="Support_frame" Style="{StaticResource MyAccountPageFrame}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Support_Tapped"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Grid>
+                                        <Label Text="{x:Static resource:AppResources.TechnicalSupport}" FontSize="{StaticResource FontSizeRegular}" TextColor="#222222" FontFamily="Poppins-Medium"></Label>
+                                        <Label Text="{x:Static resource:AppResources.Troubleshooting}" Margin="0,21,0,0" FontSize="{StaticResource FontSizeSmall}" TextColor="{StaticResource GreyText}" FontFamily="Poppins-Regular"></Label>
+                                    </Grid>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1">
+                                    <Label Text="" FontSize="14" HorizontalOptions="End" VerticalOptions="Center" FontFamily="Fontello" TextColor="#9B9B9B" Margin="0,10,0,0"></Label>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Margin="0">
+                <Button x:Name="Manage" Text="Управление сотрудниками" Clicked="Manage_Clicked" IsEnabled="False" IsVisible="False" Style="{StaticResource MainButton}"></Button>
+                <Button Text="{x:Static resource:AppResources.SignOutOfAccount}" Clicked="LogOut_Clicked" Style="{StaticResource MainButton}"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

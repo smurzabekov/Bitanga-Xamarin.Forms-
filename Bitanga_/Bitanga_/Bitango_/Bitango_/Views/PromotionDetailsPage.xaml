@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:custom="clr-namespace:Bitango_.Customs"
+             x:Class="Bitango_.Views.PromotionDetailsPage">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.2*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <Image Aspect="AspectFill" Source="{Binding SelectedPromotion.ImageSource}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <Button BackgroundColor="Transparent" Padding="0" HorizontalOptions="Start" WidthRequest="31" HeightRequest="31" Text="" FontFamily="Fontello" FontSize="23" Margin="15" TextColor="#ffffff" Clicked="GoBack_Clicked" VerticalOptions="Start"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1" >
+                <pv:PancakeView x:Name="DetailsView" CornerRadius="30,30,0,0" Padding="35,35,35,0" Margin="0,-40,0,0" 
+                        BackgroundColor="White" VerticalOptions="FillAndExpand">
+                    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
+                        <StackLayout Spacing="15" HorizontalOptions="FillAndExpand">
+                            <StackLayout Grid.Row="1" Spacing="15" >
+                                <Label Text="{Binding SelectedPromotion.Title}" Margin="4,0,0,10" FontSize="{StaticResource FontSizeLarge}" TextColor="#000000"></Label>
+                                <!--<Label Text="{Binding SelectedPromotion.Price, StringFormat='{0}'}" FontFamily="Bitanga_Roboto_Regular"  FontSize="18" TextColor="#000000"/>-->
+                            </StackLayout>
+                            <Label Text="{Binding SelectedPromotion.Description}" FontSize="{StaticResource FontSizeMedium}" FontFamily="Poppins-Regular" TextColor="#9B9B9B"/>
+                        </StackLayout>
+                    </ScrollView>
+                </pv:PancakeView>
+            </StackLayout>
+            <StackLayout Grid.Row="2">
+                <StackLayout x:Name="button_stackLayout" Margin="15,0,15,15">
+                    <Button x:Name="button_share" Text="Share" Clicked="Share_Clicked" Style="{StaticResource MainButton}"></Button>
+                    <Button x:Name="button" Style="{StaticResource MainButton}"></Button>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

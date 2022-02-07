@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "28153154759",
+    "firebase_url": "https://bitanga-ad98c.firebaseio.com",
+    "project_id": "bitanga-ad98c",
+    "storage_bucket": "bitanga-ad98c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28153154759:android:d15f1141ee8dc89a1382e2",
+        "android_client_info": {
+          "package_name": "com.bloodhoundsstudio.bitanga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "28153154759-uhprie5ft9h9ofj94bk5k2fcn92gv4ov.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bloodhoundsstudio.bitanga",
+            "certificate_hash": "5617d90c3eb978e070182aea590388ba303ef4c0"
+          }
+        },
+        {
+          "client_id": "28153154759-ogdsteas4g8n5nuhipfma4pa5ul7euq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg_1SmSiaTq5JClysJoelZ-moX-qjBTmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "28153154759-ogdsteas4g8n5nuhipfma4pa5ul7euq8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "28153154759-fi597di3ok4fqsudvmbscuk5a9dfe3cn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bloodhoundsstudio.bitanga"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

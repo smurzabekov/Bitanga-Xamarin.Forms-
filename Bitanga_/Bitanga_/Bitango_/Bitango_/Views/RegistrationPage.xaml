@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.RegistrationPage"
+             BackgroundColor="#e5d9d9"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid Margin="10,10,10,15">
+            <Button Style="{StaticResource BackArrowButton}" Clicked="GoBack_Clicked"/>
+            <StackLayout Grid.Row="0" VerticalOptions="Center">
+                <Grid>
+                    <Image Style="{StaticResource ImageRoundBitanga}"></Image>
+                </Grid>
+                <Frame Margin="0,0,0,2" Style="{StaticResource MainEntryFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text=""  Style="{StaticResource MainEntryImage}"/>
+                        <custom:CustomEntry x:Name="EntryUserName" Grid.Column="1" Placeholder="{x:Static resource:AppResources.Name}" Style="{StaticResource MainEntry}"/>
+                    </Grid>
+                </Frame>
+                <Frame Margin="0,0,0,2" Style="{StaticResource MainEntryFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="23"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="" Style="{StaticResource MainEntryImage}"/>
+                        <custom:CustomEntry x:Name="EntryUserEmail" Grid.Column="1" Keyboard="Email" Placeholder="{x:Static resource:AppResources.Email}" Style="{StaticResource MainEntry}"/>
+                    </Grid>
+                </Frame>
+                <Frame Margin="0,0,0,2" Style="{StaticResource MainEntryFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="" Style="{StaticResource MainEntryImage}"/>
+                        <custom:CustomEntry x:Name="EntryUserPhoneNumber" Grid.Column="1" Placeholder="{x:Static resource:AppResources.Phone}" Style="{StaticResource MainEntry}"/>
+                    </Grid>
+                </Frame>
+                <Frame Margin="0,0,0,2" Style="{StaticResource MainEntryFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="" Style="{StaticResource MainEntryImage}"/>
+                        <custom:CustomDatePicker x:Name="datepicker" Format="D" Grid.Column="1" Style="{StaticResource MainEntry}"/>
+                    </Grid>
+                </Frame>
+                <Frame Margin="0,0,0,2" Style="{StaticResource MainEntryFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="" Style="{StaticResource MainEntryImage}"/>
+                        <custom:CustomEntry x:Name="EntryUserPassword" IsPassword="True" Grid.Column="1" Placeholder="{x:Static resource:AppResources.Password}" Style="{StaticResource MainEntry}"/>
+                    </Grid>
+                </Frame>
+                <Frame Margin="0,0,0,2" Style="{StaticResource MainEntryFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="" Style="{StaticResource MainEntryImage}"/>
+                        <custom:CustomEntry x:Name="EntryRepeatUserPassword" IsPassword="True" Grid.Column="1" Placeholder="{x:Static resource:AppResources.RepeatPassword}" Style="{StaticResource MainEntry}"/>
+                    </Grid>
+                </Frame>
+                <Button Text="{x:Static resource:AppResources.SignUp}" Clicked="Register_Clicked" Style="{StaticResource MainButton}"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.SupportPage"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             BackgroundColor="#f9f5f2">
+    <custom:CustomShell.TitleView>
+        <Grid>
+            <Label Text="{x:Static resource:AppResources.TechnicalSupport}" Margin="4,10,0,0" FontSize="{StaticResource TitleFontSize}" TextColor="#000000"></Label>
+        </Grid>
+    </custom:CustomShell.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="15,10,15,0">
+                <Label Text="{x:Static resource:AppResources.HowCanWeHelpYou}" FontSize="{StaticResource FontSizeLarge}" Margin="7,0,0,7" TextColor="#828282"></Label>
+                <Frame ClassId="Мне не пришли баллы" Margin="0,0,0,5" Style="{StaticResource SupportCardFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0">
+                            <Grid>
+                                <Label Text="{x:Static resource:AppResources.IDidNotReceivePoints}" FontSize="{StaticResource FontSizeRegular}" TextColor="#222222" FontFamily="Poppins-Medium" VerticalOptions="Center" VerticalTextAlignment="Center"></Label>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="" FontSize="{StaticResource FontSizeMedium}" HorizontalOptions="End" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" FontFamily="Fontello" TextColor="#9B9B9B"></Label>
+                        </StackLayout>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Support_Clicked"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame ClassId="Проблемы с подарками" Margin="0,0,0,5" Style="{StaticResource SupportCardFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0">
+                            <Grid>
+                                <Label Text="{x:Static resource:AppResources.GiftProblems}" FontSize="{StaticResource FontSizeRegular}" TextColor="#222222" FontFamily="Poppins-Medium" VerticalOptions="Center" VerticalTextAlignment="Center"></Label>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="" FontSize="{StaticResource FontSizeMedium}" HorizontalOptions="End" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" FontFamily="Fontello" TextColor="#9B9B9B"></Label>
+                        </StackLayout>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Support_Clicked"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame ClassId="Я хочу ввести промо-код" Margin="0,0,0,5" Style="{StaticResource SupportCardFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0">
+                            <Grid>
+                                <Label Text="{x:Static resource:AppResources.IWantToEnterAPromoCode}" FontSize="{StaticResource FontSizeRegular}" TextColor="#222222" FontFamily="Poppins-Medium" VerticalOptions="Center" VerticalTextAlignment="Center"></Label>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="" FontSize="{StaticResource FontSizeMedium}" HorizontalOptions="End" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" FontFamily="Fontello" TextColor="#9B9B9B"></Label>
+                        </StackLayout>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Support_Clicked"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame ClassId="Другое" Margin="0,0,0,5" Style="{StaticResource SupportCardFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0">
+                            <Grid>
+                                <Label Text="{x:Static resource:AppResources.Other}" FontSize="{StaticResource FontSizeRegular}" TextColor="#222222" FontFamily="Poppins-Medium" VerticalOptions="Center" VerticalTextAlignment="Center"></Label>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="" FontSize="{StaticResource FontSizeMedium}" HorizontalOptions="End" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" FontFamily="Fontello" TextColor="#9B9B9B"></Label>
+                        </StackLayout>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Support_Clicked"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame ClassId="Удалить аккаунт" Margin="0,0,0,5" Style="{StaticResource SupportCardFrame}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0">
+                            <Grid>
+                                <Label Text="{x:Static resource:AppResources.DeleteAccount}" FontSize="{StaticResource FontSizeRegular}" TextColor="#222222" FontFamily="Poppins-Medium" VerticalOptions="Center" VerticalTextAlignment="Center"></Label>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="" FontSize="{StaticResource FontSizeMedium}" HorizontalOptions="End" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" FontFamily="Fontello" TextColor="#9B9B9B"></Label>
+                        </StackLayout>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Support_Clicked"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

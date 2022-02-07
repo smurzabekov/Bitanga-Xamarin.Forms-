@@ -1,0 +1,52 @@
+{
+  "html_attributions": [],
+  "next_page_token": "CrQEJgIAAHkeCtnPrStdevV698oaeW9intrlX2YmGkAomiVM3-REQIyCZi8f2VmJ0GLb_cuKF2ISfGcu5dPZ0y7W_z544Y7k0lhqzbabtH1QlEnwlzUwLOpNPv8ilr_ZVE4_nnxytYIF0y5b1EfuGcpwqDfmXSCLXAPv6reOtgZuQtswMQ3n_JQRcGrPczt6K-0HD7_l2q9VwaGNXQMNjMpd1qUc9_zC1MhfOoFMNMWjDlvEGBSov7g-s-9SH3oMA_B0HN4C4EqvisrIhSxAxX7nUgOoYD8-gzV7h4m7cLZt25WmN1q4z3FsyqHe3t7PYlpM7kCmTKurQclJ0NdJNKfrghV09b-oGpmiudbXFjH8RkoTve8hY-xre5PrBInAWAhUlUNHxkmwhvDnl5_qr_ky6WkSXCUpOUe9Azv5RILZOSj0kVJetWZmyfIsa2HkAednKnYg-BReVfK2IJpgDxeYTD5QReHc4ZzuS_zKsY4RlB13ONiw7o5vnVWBgf3NxV7KU0eZe0sAuFXA3lduqIrAVxNOVZFezRRb9X4EsxSKl3mGaeHgpT2hClm6kIxjFKV_UT9_ecqovs-ADA9o_wJGiyckBi7YV9NmtVEc4zWulZTMrqA1MGxL39Ne97NRly1ug4hIvoiFzr7i0sVzIN4pKVmqOVAJP3IYPP4Akk7nQjajozhlcj_uj4ksaucFOtUNz-4j6Lc1aZXhbDvkpKuxsLGI8PixBkE0La1O6rsDR9xwc0J3EhAd-MlMDnRdBf_imvnuLP3kGhQRQVFVtR5nMKXqd5-MIz3LR-2OoA",
+  "results": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 43.2511951,
+          "lng": 76.945676
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 47.6186224302915,
+            "lng": -122.1301772197085
+          },
+          "southwest": {
+            "lat": 47.6159244697085,
+            "lng": -122.1328751802915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bank_dollar-71.png",
+      "id": "ceb41ee197bd742ca8356b05e88299adb536ef65",
+      "name": "Bitanga Almaty",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 608,
+          "html_attributions": [
+            "\u003ca href=\"https://maps.google.com/maps/contrib/102030187927461286901/photos\"\u003eOpus Bank\u003c/a\u003e"
+          ],
+          "photo_reference": "CmRZAAAA6_Cu4Hjc8npp7EinnGabxM-YnleoPNTtB_h37kCQZgaJpe-uqnit3x5KKvx7Jgo8Qp4Bp88XGdBtePjUcsK0o525Rid3-7U6QqSOPUkjUJjMja4LBccKKAAkH948hr9FEhA9t6pW-nu-CRCNZpkhGN79GhT1keroclZhtaRlNrnfcb3yDwok-A",
+          "width": 1080
+        }
+      ],
+      "place_id": "ChIJwYR707ptkFQRPVkcj_fXLIs",
+      "plus_code": {
+        "compound_code": "JV89+W9 Bellevue, Washington, United States",
+        "global_code": "84VVJV89+W9"
+      },
+      "rating": 3,
+      "reference": "ChIJwYR707ptkFQRPVkcj_fXLIs",
+      "types": [ "bank", "atm", "finance", "point_of_interest", "establishment" ],
+      "user_ratings_total": 2,
+      "vicinity": "Almaty, st. Panfilov, 114 (corner of Karasai batyr)"
+    }
+    
+  ],
+  "status": "OK"
+}

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bitango_.App">
+    <Application.Resources>
+        <ResourceDictionary x:Name="dictionary">
+            <Color x:Key="Primary">#6200EE</Color>
+            <Color x:Key="Secondary">#3700B3</Color>
+            <Color x:Key="Accent">#03DAC6</Color>
+            <Color x:Key="White">White</Color>
+            <Color x:Key="Black">Black</Color>
+            <Color x:Key="Pink">#f2acac</Color>
+            <Color x:Key="PinkBackground">#f7e7e5</Color>
+            <Color x:Key="MainBackground">#f9f5f2</Color>
+            <Color x:Key="AltBackground">#e5d9d9</Color>
+            <Color x:Key="GreyText">#7E7E7E</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

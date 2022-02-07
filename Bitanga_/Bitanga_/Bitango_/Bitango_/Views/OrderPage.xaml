@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.OrderPage"
+             xmlns:custom="clr-namespace:Bitango_.Customs"
+             BackgroundColor="#f9f5f2"
+             NavigationPage.HasNavigationBar="False">
+    <custom:CustomShell.TitleView>
+        <Grid>
+            <Label Text="О заказе" Margin="4,10,0,0" FontSize="24" TextColor="#000000"></Label>
+        </Grid>
+    </custom:CustomShell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HeightRequest="35" Margin="15,10,15,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button BackgroundColor="Transparent"  Padding="0" HorizontalOptions="Start" WidthRequest="60" HeightRequest="31" Text="" FontFamily="Fontello" FontSize="23" Margin="0" TextColor="#222222" Clicked="GoBack_Clicked" VerticalOptions="Start"></Button>
+                <Label Grid.Column="1" Text="О заказе" Margin="5,0,0,0" FontSize="24" TextColor="#000000" VerticalOptions="Start"></Label>
+            </Grid>
+            <ScrollView>
+                <StackLayout Margin="15,0,15,10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Text="{Binding SelectedOrder.ID, StringFormat='Заказ №{0}'}" FontSize="16" TextColor="#222222" FontAttributes="Bold"></Label>
+                        <Label Margin="0" Text="Статус заказа:" Grid.Row="1" FontSize="14" FontFamily="Poppins-Regular" TextColor="#9B9B9B"></Label>
+                        <Label Text="{Binding SelectedOrder.DateOfIssue}" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" FontFamily="Poppins-Regular" FontSize="14" TextColor="#9B9B9B"></Label>
+                        <Label Margin="0" Grid.Row="1" Grid.Column="1" HorizontalOptions="End" Text="Бонусы начислены" TextColor="#2AA952"/>
+                    </Grid>
+                    <Label FontSize="14" TextColor="#222222" FontFamily="Poppins-Medium" Margin="0,15,0,10" Text="{Binding SelectedOrder.Quantity, StringFormat='{0} блюда'}"></Label>
+                    <Frame Margin="0,0,0,15" Padding="0" HeightRequest="104">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="104"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image BackgroundColor="Black" Aspect="AspectFill" Source="Meatpage_tibon.jpg" WidthRequest="104" HeightRequest="104" />
+                            <StackLayout Grid.Column="1" Padding="10,11,10,10">
+                                <Grid HeightRequest="60">
+                                    <Label Text="Вино" FontFamily="Poppins-Medium" HorizontalOptions="Start" TextColor="#222222" FontSize="14"/>
+                                    <Label Text="Inglenook Cabernet Sauvignon Napa Valley" TextColor="#9B9B9B" FontSize="11" FontFamily="Poppins-Regular" Margin="0,20,0,0"></Label>
+                                </Grid>
+                                <Grid Margin="0,0,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="90"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid>
+                                        <Label Text="Кол-во:" TextColor="#9B9B9B" FontSize="11" FontFamily="Poppins-Regular"></Label>
+                                        <Label Text="1" Grid.Column="1" TextColor="#222222" FontSize="11" FontFamily="Poppins-Regular"></Label>
+                                    </Grid>
+                                    <Label Grid.Column="1" FontSize="14" TextColor="#222222" FontFamily="Poppins-Medium" Text="6000₸" HorizontalOptions="End"></Label>
+                                </Grid>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <Frame  Margin="0,0,0,15" Padding="0" HeightRequest="104">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="104"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image BackgroundColor="Black" Aspect="AspectFill" Source="Meatpage_losos.jpg" WidthRequest="104" HeightRequest="104" />
+                            <StackLayout Grid.Column="1" Padding="10,11,10,10">
+                                <Grid HeightRequest="60">
+                                    <Label Text="Суп" FontFamily="Poppins-Medium" HorizontalOptions="Start" TextColor="#222222" FontSize="14"/>
+                                    <Label Text="Борщ традиционый" TextColor="#9B9B9B" FontSize="11" FontFamily="Poppins-Regular" Margin="0,20,0,0"></Label>
+                                </Grid>
+                                <Grid Margin="0,0,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="90"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid>
+                                        <Label Text="Кол-во:" TextColor="#9B9B9B" FontSize="11" FontFamily="Poppins-Regular"></Label>
+                                        <Label Text="1" Grid.Column="1" TextColor="#222222" FontSize="11" FontFamily="Poppins-Regular"></Label>
+                                    </Grid>
+                                    <Label Grid.Column="1" FontSize="14" TextColor="#222222" FontFamily="Poppins-Medium" Text="2000₸" HorizontalOptions="End"></Label>
+                                </Grid>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <Frame Padding="0" HeightRequest="104" Margin="0,0,0,18">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="104"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image BackgroundColor="Black" Aspect="AspectFill" Source="Meatpage_konina.jpg" WidthRequest="104" HeightRequest="104" />
+                            <StackLayout Grid.Column="1" Padding="10,11,10,10">
+                                <Grid HeightRequest="60">
+                                    <Label Text="Сыр" FontFamily="Poppins-Medium" HorizontalOptions="Start" TextColor="#222222" FontSize="14"/>
+                                    <Label Text="Сыр Пошенонский " TextColor="#9B9B9B" FontSize="11" FontFamily="Poppins-Regular" Margin="0,20,0,0"></Label>
+                                </Grid>
+                                <Grid Margin="0,0,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="90"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid>
+                                        <Label Text="Кол-во:" TextColor="#9B9B9B" FontSize="11" FontFamily="Poppins-Regular"></Label>
+                                        <Label Text="1" Grid.Column="1" TextColor="#222222" FontSize="11" FontFamily="Poppins-Regular"></Label>
+                                    </Grid>
+                                    <Label Grid.Column="1" FontSize="14" TextColor="#222222" FontFamily="Poppins-Medium" Text="3000₸" HorizontalOptions="End"></Label>
+                                </Grid>
+
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Общая сумма:" FontFamily="Poppins-Medium" VerticalOptions="Center" FontSize="14" TextColor="#9B9B9B" Grid.Column="0"></Label>
+                        <Label Text="{Binding SelectedOrder.TotalAmount, StringFormat='{0}₸'}" FontFamily="Poppins-Regular" VerticalOptions="Center" HorizontalOptions="Start" FontSize="16" TextColor="#222222"  Grid.Column="1" ></Label>
+                    </Grid>
+                    <Grid Margin="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140" />
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Начислено бонусов:" FontFamily="Poppins-Medium" VerticalOptions="Center" FontSize="14" TextColor="#9B9B9B" Grid.Column="0"></Label>
+                        <Label Text="{Binding SelectedOrder.Bonuses, StringFormat='{0} @ '}" FontFamily="Bitanga_Roboto_Regular" VerticalOptions="Center" HorizontalTextAlignment="Start" FontSize="16" TextColor="#222222"  Grid.Column="1"></Label>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

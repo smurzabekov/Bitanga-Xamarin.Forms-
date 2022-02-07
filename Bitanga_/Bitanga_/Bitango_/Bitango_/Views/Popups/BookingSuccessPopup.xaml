@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rg:PopupPage
+             xmlns:rg="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bitango_.Views.BookingSuccessPopup"
+             xmlns:resource="clr-namespace:Bitango_.Files.Resources"
+             BackgroundColor="#f9f5f2">
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <!--<Image Margin="62" Source="BookingSuccessPopup_success.jpg"></Image>-->
+        <Label Text="{x:Static resource:AppResources.SuccessfulBooking}" FontSize="24" TextColor="#3E4462" FontFamily="Poppins-Medium" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+        <Label Text="{x:Static resource:AppResources.TheManagerWillContact}" HorizontalTextAlignment="Center" TextColor="#7E7E7E" FontSize="12" FontFamily="Poppins-Regular"></Label>
+        <Button Clicked="Continue_Clicked"  Margin="10,52,9,0" Padding="15,1,15,1" CornerRadius="22" HeightRequest="45" Text="{x:Static resource:AppResources.Continue}" BackgroundColor="#f2acac" FontFamily="Poppins-Regular" TextColor="#000000"></Button>
+    </StackLayout>
+</rg:PopupPage>
